@@ -18,7 +18,25 @@
         <!-- Tell Maven to treat all source files as UTF-8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+    <distributionManagement>
+        <servers>
+        <server>
+      <id>nexus</id>
+      <username>admin</username>
+      <password>admin</password>
+    </server>
+    </servers>
+        <repository>
+            <id>nexus</id>
+            <name>Internal Releases</name>
+            <url>http://172.17.0.4:8081/repository/project-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://172.17.0.4:8081/repository/project-snap/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <dependencies>
         <!-- Here are all your dependencies. Currently only one. These are automatically downloaded from https://mvnrepository.com/ -->
         <dependency>
@@ -27,9 +45,5 @@
             <version>3.6.12</version>
         </dependency>
     </dependencies>
-    <server>
-      <id>nexus</id>
-      <username>admin</username>
-      <password>admin</password>
-    </server>
+    
 </project>
