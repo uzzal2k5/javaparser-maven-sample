@@ -19,13 +19,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <distributionManagement>
-        <servers>
-        <server>
-      <id>nexus</id>
-      <username>admin</username>
-      <password>admin</password>
-    </server>
-    </servers>
         <repository>
             <id>nexus</id>
             <name>Internal Releases</name>
